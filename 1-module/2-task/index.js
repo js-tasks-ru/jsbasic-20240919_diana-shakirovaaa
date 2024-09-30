@@ -1,17 +1,19 @@
-/**
- * Эту функцию трогать не нужно
- */
+
 function print(text) {
   console.log(text);
 }
 
-/**
- * Эту функцию нужно поменять так,
- * чтобы функция sayHello работала корректно
- */
+
 function isValid(name) {
-  if(name !== '' && name === name.trim() && name.length >= 4){
+
+  if(name === null || name.includes(' ') === true){
+    return false;
+  }
+
+  if(name !== '' && name.length >= 4 ){
     return true;
+  }else{
+    return false;
   }
 }
 
@@ -24,7 +26,3 @@ function sayHello() {
     print('Некорректное имя');
   }
 }
-
-
-// Необходимо, чтобы на сайте можно было поприветствовать только пользователей,
-//  которые удовлетворяют следующему условию – имя не пустое, без пробелов, минимум 4 символа.
